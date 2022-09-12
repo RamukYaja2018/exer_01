@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<style>
+.q1{
+  color:blue;
+}
+</style>
+<TITLE>Function</TITLE>
+    <SCRIPT language="JavaScript">
+    function simple()
+          {
+          let longestWord = str => {
+         const strArr = str.split(" ");
+         let min = strArr[0];
+         let max = strArr[0];
+         for(let i = 1; i < strArr.length; i++){
+            if(strArr[i].length < min.length){
+               min = strArr[i];
+      };
+      if(strArr[i].length > max.length){
+         max = strArr[i];
+      };
+   };
+   return ["\n"+"SMALLEST : "+min+'\n'+"LARGEST  : "+max];
+};               
+      alert("the smallest and the largest words inthe text are \n=> "+longestWord(prompt("")));
+          }
+    </SCRIPT>
+</HEAD>
+<BODY class="q1">
+      <H1>Using Simple JavaScript Function</H1>
+      <P>Here we are using a simple JavaScript function that displays an alert
+      box on the load event of the Web page.</P>
+      <input type="button" value="smallest and largest" onClick="simple()" />
+</BODY>
+</HTML>

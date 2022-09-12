@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>BMI calculator</title>
+    </head>
+    <body>
+    <hl><b>Calculate your body index</b></hl>
+    <fieldset>
+        Weight(in kilograms): <input type="text" id="weight"><br><br>
+        Height(in meters): <input type="text" id="height"><br><br>
+        <button type ="submit" onclick="calculate()">Get BMI </button>
+    </fieldset>
+    <p> Your BMI is <u><b><span id = "score1"></span></b></u><br>
+    Your body type is <u><b><span id = "type1"></span></b></u>
+    </p>
+    <script language="JavaScript">
+        function calculate()
+        {
+        var weight = parseFloat(document.getElementById("weight").value);
+        var height = parseFloat(document.getElementById("height").value);
+        const score = weight/(height*height)
+        document.getElementById("score1").innerHTML = score;
+        var type;
+        if(score < 18)
+        {
+        type = "Underweight";
+        }
+        else if(score > 18 && score < 25)
+        {
+            type = "Normal";    
+        }
+        else if(score > 25 && score < 30)
+        {
+        type = "Overweight";
+        }
+        else
+        {
+        type = "Obese";
+        }
+        document.getElementById("type1").innerHTML = type;
+        }
+    </script>
+    </body>
+</html>
+<!-- <!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<style>
+*{
+  MARGIN:10PX;
+}h1,P{
+  color:blue;
+}
+</style>
+<TITLE>Function</TITLE>
+    <SCRIPT language="JavaScript">
+		function calculate()
+    {
+    var ht = parseFloat(document.getElementById("height").value);
+    var wt = parseFloat(document.getElementById("weight").value);
+    let bomain = wt/(ht*ht);
+    if (bomain <= 18.5) {
+    greeting = "YOUR ARE UNDERWEIGHT";
+  	} else if (bomain <= 24.9) {
+    greeting = "YOU ARE HEALTHY";
+  	}else if (bomain <= 29.9) {
+    greeting = "YOU ARE OVERWEIGHT";
+  	} else {
+    greeting = "!!!!__-YOU_ARE_OBESE-__!!!!";
+  	}
+    alert(bomain);
+    }
+    </SCRIPT>
+</HEAD>
+<BODY>
+  <h1>CALCULATE YOUR BODY MASS INDEX</h1><BR/>
+  <field_set>
+  <hr/>
+  <label>WEIGHT (kg): </label>
+  <input type="text" id="weight" /><br/>
+  <label>HEIGHT (mt): </label>
+  <input type="text" id="height" /><br/>
+  <button onclick="calculate();">GET BMI
+  </button>
+  <br/><br/>
+    <p>
+    Your BMI is <span id="score"></span>.<br/>
+    body type is <span id="type"></span>
+    </p>
+  <hr/>
+  </field_set>
+</BODY>
+</HTML> -->
