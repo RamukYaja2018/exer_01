@@ -1,11 +1,23 @@
 <!DOCTYPE html>
     <html>
     <head>
-        <title>Coin Flip</title>
+        <title>Flipping coin</title>
+        <style>
+            *{
+                margin: auto;
+
+            }
+            #d1{
+                border: 2px solid blue;
+                border-radius: 0.5cm;
+                padding: 5px solid cyan;
+            }
+        </style>
     </head>
     <body>
-        <h1>Heads or Tails</h1>
-        <div>
+        <h1 style="text-align:center">Heads / Tails</h1>
+        <div id="d1">
+            <br><br>
         <img src="head.jpg" id ="coin">
         <button type="button" id="flip" onclick="flip()">Flip!</button>
         </div>
