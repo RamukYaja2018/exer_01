@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+                                        <head>
+                                            <meta name="viewport" content="width=device-width",initial-scale=1;>
+                                    <style>
+                                    #txt{
+                                        text-align:center;
+                                        margin:30px;
+                                        padding:25px;
+                                        background-color:cyan;
+                                        border:5px solid blue;
+                                        position: static;
+                                        }
+                                        #nxt{
+                                        text-align:center;
+                                        margin:30px;
+                                        padding:75px;
+                                        background-color:rgb(255, 251, 0);
+                                        border:5px solid rgba(247, 122, 6, 0.308);
+                                        opacity:0.5;
+                                        }
+                                    </style>
+                                        </head>
+<body onload="startTime()">
+<h2 style="color:blue">Clock USING setInterval</h2>
+<div id="txt"></div><div id="nxt"><b>:) HAVE A NICE DAY ^-^</b></div>
+                                    <script>
+                                    function startTime() {
+                                    today = new Date();
+                                    let h = today.getHours();
+                                    let m = today.getMinutes();
+                                    let s = today.getSeconds();
+                                    let l = today.getMilliseconds();
+                                    let dte = today.getDate();
+                                    let day = today.getDay();
+                                    let yer = today.getFullYear();
+                                    document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s+ "" + "       date"+ "\n" +"<---" + dte + "-" + day + "-" + yer + "--->";
+                                    setInterval(startTime, 1000);}
+                    
+                                     </script>
+             </body>
+</html>
