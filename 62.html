@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>random background color</title>
+  <STYLE>
+    h2{
+        position:fixed;
+        text-align: center;
+        color:blue;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    #q1,#q2{
+        margin: 10px;
+        padding: 20px;
+        border: 1cm;
+    }
+  </STYLE>
+
+</head>
+<body onload="random_bg_color()">
+    <script>
+            function random_bg_color() {
+            var x = Math.floor(Math.random() * 256);
+            var y = Math.floor(Math.random() * 256);
+            var z = Math.floor(Math.random() * 256);
+            var bgColor = "rgb(" + x + "," + y + "," + z + ")";console.log(bgColor);
+            document.body.style.background = bgColor;
+            setInterval(random_bg_color, 5000);
+            }
+        random_bg_color();
+    </script>
+    <h2>___RANDOM BACKGROUNG CHANGING PROGRAM___</h2>
+    <div id="q1">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="q2">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
