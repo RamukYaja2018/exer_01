@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="megaplay">
+        <h1>Megaplay form</h1>
+        <form action="/server" method="post">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <td>Register Number:</td>
+                    <td><input type="text" name="userreg"></td>
+                </tr>
+                <tr>
+                    <td>Year Of Study</td>
+                    <td><input type="date" name="useryear"></td>
+                </tr>
+                <tr>
+                    <td>School:</td>
+                    <td>
+                        <select name="userschool" id="">
+                            <option value="BTech">BTech</option>
+                            <option value="MTech">MTech</option>
+                            <option value="BSc">BSc</option>
+                            <option value="Phd">Phd</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button>Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
